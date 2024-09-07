@@ -1,0 +1,324 @@
+ul{
+    margin:0px;
+    padding:0px;
+    list-style-type: none; 
+    
+}
+body {
+    margin: 0;
+    background-color:#eee;
+}
+/*page*/
+.page{
+    margin: 0px auto;
+    width:100%;
+}
+.page .header{
+    height: 45px;
+    background-color:#eee;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    width: 100%; 
+    box-shadow: 0  .5rem 1rem rgba(0,0,0,.1);
+}
+
+.sidebar{
+    
+    padding-top: 10px;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: flex-start;
+    
+   
+}
+.sidebar li{
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.sidebar a{
+    align-items: center;
+    padding-left: 30px ;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(7, 24, 34);
+    
+}
+.sidebar-item:hover{
+    background-color: #f0f0f0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    
+}
+.page .content{
+    background-color: rgb(255, 255, 255);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width:100%;
+    
+    
+}
+.page .footer{
+    height:auto;
+    bottom: 0px;
+    background-color: #eee;
+    width: 100%;
+    
+}
+/*end of page*/
+
+/*multi-columns*/
+.multi-columns{
+    display: flex;
+    flex-grow:row;
+    justify-content: flex-start;
+}
+.multi-columns .left{
+    display: flex;
+    flex-grow:row;
+    justify-content: flex-start;
+}
+.multi-columns .left .desc{
+    color:brown;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.multi-columns .right{
+    display: flex;
+    flex-grow:row;
+    justify-content: flex-end;
+}
+.multi-columns .right .desc{
+    color:brown;
+    padding-right: 10px;
+    font-size: 16px;
+}
+/*end of multi-columns*/
+
+/*col*/
+.col-1{width:calc(100%/8);}
+.col-2{width:calc(100%*2/8);}
+.col-3{width:calc(100%*3/8);}
+.col-4{width:calc(100%*4/8);}
+.col-5{width:calc(100%*5/8);}
+.col-6{width:calc(100%*6/8);}
+.col-7{width:calc(100%*7/8);}
+.col-8{width:100%;}
+/*end of col*/
+/*branch*/
+.brand{
+    width: 150px;
+    position: relative;
+}
+.brand > .icon{
+    background-image: url(../images/logo.png);
+    width:37px;
+    height: 36px;
+    background-position: 50% 50%;
+    top: 1px;
+    position: absolute;
+    display: inline-block;
+}
+.brand > .name{
+    margin-left: 40px;
+    display: inline;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*end of branch*/
+
+/*main-nav*/
+.main-nav{
+    display: flex;
+    flex-grow: row;
+}
+
+.main-nav .item{
+    list-style:none;
+    padding: 10px;
+}
+
+.main-nav .item .text{
+    text-decoration: none;
+    color:rgb(40, 7, 7);
+    font-size: 16px;
+}
+
+.main-nav .item .text:hover{
+    mix-blend-mode:color-burn;
+}
+.main-nav .item.active{
+    text-decoration: underline;
+    text-decoration-color: #438CF2;
+}
+.main-nav .item.active .text{
+    text-decoration: underline;
+    text-decoration-color: #438CF2;
+}
+/*end of main-nav*/
+
+/*promotions*/
+.promotions{
+    width: 100%;
+    height: 240px; /*365px*/
+    position: relative;
+    background-image: url(../images/bg_01.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.promotions .previous{
+    text-decoration: none;
+    position: absolute;
+    top: calc(50% - 16px);
+    left:65px;
+    width: 32px;
+    height: 64px;
+}
+.promotions .previous .icon-previous{
+    display: table;
+}
+.promotions .previous .icon-previous::before{
+    content:'\003C';
+    color: white;
+    padding-top: 15px;
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: "Cambria, Cochin, Georgia, Times, Times New Roman, serif";
+}
+.promotions .next{
+    text-decoration: none;
+    position: absolute;
+    top: calc(50% - 16px);
+    right:65px;
+    width: 32px;
+    height: 64px;
+}
+.promotions .next .icon-next{
+    display: table;
+}
+.promotions .next .icon-next::before{
+    content:'\003E';
+    color: white;
+    padding-top: 15px;
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: "Cambria, Cochin, Georgia, Times, Times New Roman, serif";
+}
+.promotions .item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.promotions .item .photo {
+    position: absolute; 
+    left: 30%; 
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%); 
+    margin-top: 22px;
+    max-width: 270px;
+    max-height: 900px;
+}
+.promotions .item .summary{
+    flex: 1;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.promotions .item .summary .title {
+    margin-left: 70%; 
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.promotions .item .summary .desc {
+    margin-left: 70%; 
+    transform: translateX(-50%); 
+    color: white;
+    font-size: 14px;
+}
+
+.promotions .item .summary .button-signupnow{
+    background-color: #4F94F1;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    position: absolute;
+    top: 210px;
+}
+.promotions .item .summary .button-signupnow .icon-check{
+    background-image: url(../T\images/icon-check.png);
+    width: 19px;
+    height: 18px;
+    display: inline-flex;
+}
+.promotions .item .summary .button-signupnow .text{
+    padding-left:8px; 
+}
+/*end of promotions*/
+
+/*table, th, td*/
+table {
+    table-layout: fixed;
+    width: 100%;
+    border: 2px solid black; /* Độ dày của khung */
+    border-collapse: collapse;
+    border-color: rgb(154, 11, 140);
+    padding: 5px;
+    border-radius: 10px; /* Bo tròn góc */
+}
+
+th, td {
+    border: 2px solid black; /* Độ dày của khung */
+    padding: 5px;
+}
+
+th {
+    background-color: #96D4D4;
+}
+
+/*end of table, th, td*/
+.nav-list {
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list .item a {
+    text-decoration: none; /* Loại bỏ dấu gạch chân */
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+}
+.butn{
+    background-color: #1fa9bb;
+  color: white;
+  font-size: 12px;
+  margin: 12px 0px 12px 12px;
+  padding: 12px;
+  margin-top: 2px;
+  
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+.butn:hover {
+    transform: translateY(-10px);
+    background-color: red;
+    color: var(--clr-light);
+  }
